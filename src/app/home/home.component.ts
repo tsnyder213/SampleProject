@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
   navigate(){
     var height = $('.image').height();
-    window.scrollTo(0, height - 40);
+    window.scrollTo({ top: height - 60, behavior: 'smooth' });
     // document.querySelector('#objective').scrollIntoView({
     // behavior: 'smooth',
     // //block: "end"
