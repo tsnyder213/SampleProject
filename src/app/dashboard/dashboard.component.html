@@ -1,0 +1,45 @@
+<div id="header">
+<button mat-icon-button routerLink="/"><mat-icon>arrow_back</mat-icon></button><h2>Welcome, Administrator</h2>
+</div>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" class="example-sidenav" [fixedInViewport]="true" [fixedTopGap]="0"
+                 [fixedBottomGap]="0">Sidenav
+    </mat-sidenav>
+
+    <mat-sidenav-content [formGroup]="options">
+      <kendo-grid
+        [kendoGridBinding]="gridData"
+        [resizable]="true"
+        style="height: auto">
+        <kendo-grid-column-group title="Server Information">
+            <kendo-grid-column
+                field="ServerID"
+                [width]="50"
+                [minResizableWidth]="30"
+                title="ID">
+            </kendo-grid-column>
+
+            <kendo-grid-column
+                field="ServerName"
+                title="Server Name"
+                [width]="100">
+            </kendo-grid-column>
+
+            <kendo-grid-column
+                field="ServerStatus"
+                title="Server Status"
+                [width]="100">
+            </kendo-grid-column>
+
+            <kendo-grid-column
+                field="Available"
+                title="Available"
+                [width]="100"
+                filter="numeric"
+                format="{0:c}">
+            </kendo-grid-column>
+        </kendo-grid-column-group>
+      </kendo-grid>
+      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
