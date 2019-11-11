@@ -1,4 +1,147 @@
 #header {
-  height: 80px;
   display: flex;
+  height: 80px;
+  box-shadow: 0 0 4px grey;
+  background: #5f2c82;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  color: white;
+}
+
+mat-sidenav {
+  margin-top: 80px;
+}
+
+#headerleft, #headerright, #headercenter {
+  width: 33.3334%;
+  position: relative;
+  height: 100%;
+}
+
+#headerleft button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: 2em;
+}
+
+#headercenter {
+  text-align: center;
+
+  h2 {
+    width: 100%;
+    font-weight: lighter;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+#headerright {
+  text-align: right;
+
+  mat-icon {
+    font-size: xx-large;
+    margin: 0 .25em;
+
+  }
+}
+
+#iconwrap {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: 2em;
+  right: 0;
+}
+
+#toolbar {
+  display: flex;
+  position: relative;
+  height: 60px;
+}
+
+#menubtnwrap {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: flex;
+  width: 100%;
+}
+
+#filterwrap {
+  margin: auto;
+  width: 33%;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+  }
+}
+
+.sidenavitem{
+  button {
+    width: 100%;
+    background: inherit;
+  }
+
+  mat-icon {
+    margin: .5em;
+  }
+}
+
+kendo-grid {
+  height: auto;
+  margin: 1em 1em 0 1em;
+}
+
+#chart {
+  width: 60%;
+  position: relative;
+  margin: 1em;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+mat-sidenav-container {
+  height: 100vh;
+}
+
+#chartmessagewrap {
+  display: flex;
+}
+
+#messageboard {
+  background: white;
+  padding: 1em;
+  margin: 1em 1em 1em 0;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+  h3 {
+    text-align: center;
+    font-weight: lighter;
+    margin: 0 auto .5em auto;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 1em;
+
+      mat-icon {
+        vertical-align: middle;
+      }
+    }
+  }
+
 }

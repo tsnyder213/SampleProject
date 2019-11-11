@@ -27,29 +27,29 @@ export class HomeComponent implements OnInit {
   navigate(){
     var height = $('.image').height();
     window.scrollTo({ top: height - 60, behavior: 'smooth' });
-    // document.querySelector('#objective').scrollIntoView({
-    // behavior: 'smooth',
-    // //block: "end"
-    // });
   }
 
-  idk() {
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
+
+  findVH() {
     window.onscroll = function() {
       var height = $('.image').height() - 80;
       if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
-        var idk = document.getElementById("idk");
-        idk.classList.add('solid');
+        var navbarwrap = document.getElementById("navbarwrap");
+        navbarwrap.classList.add('solid');
       }
       else {
-        var idk = document.getElementById("idk");
-        if(idk){
-          idk.classList.remove('solid');
+        var navbarwrap = document.getElementById("navbarwrap");
+        if(navbarwrap){
+          navbarwrap.classList.remove('solid');
         }
       }
     };
   }
 
   ngOnInit() {
-    this.idk();
+    this.findVH();
 	}
 }

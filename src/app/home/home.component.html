@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" id="idk">
+<nav class="navbar navbar-default navbar-fixed-top" id="navbarwrap">
   <div class="container">
     <div class="navbar-header">
     </div>
@@ -6,9 +6,8 @@
       <button mat-button [matMenuTriggerFor]="menu" id="navmenu"><mat-icon>menu</mat-icon></button>
       <mat-menu #menu="matMenu">
         <ng-template matMenuContent>
-          <button mat-menu-item>About Me</button>
-          <button mat-menu-item>LinkedIn</button>
-          <button mat-menu-item>Resume</button>
+          <button mat-menu-item (click)="goToLink('https://www.linkedin.com/in/tannersnyder/')">LinkedIn</button>
+          <button mat-menu-item routerLink="/resume">Resume</button>
         </ng-template>
       </mat-menu>
     </div>
@@ -18,7 +17,7 @@
     <div id="q2">
       <div id="hellowrap" [@simpleFadeAnimation]="'in'">
         <h1 class="heading">Hello, Q2!</h1>
-        <button kendoButton class="btn btn-large" routerLink="/login">Angular UI</button>
+        <button kendoButton class="btn btn-large" (click)="navigate()">Angular UI</button>
       </div>
     <a (click)="navigate()">
       <div id="scroll-arrow" class="scroll-arrow">
@@ -30,14 +29,14 @@
 <div id="bottomwrapper">
   <div id="objective">
     <h2 id="objectivesection">The Objective</h2>
-    <h3>The goal of this site is to demonstrate my knowledge of UI and Angular practices. This site was written in one day using Angular 8 with Kendo and Angular Material components. Instead of one main project, I have made a few different UI components with snippets of functionality. The code for this site can be found at: .</h3>
+    <h3>The goal of this site is to demonstrate my knowledge of UI and Angular practices. This mock site was written in one day using Angular 8 with Kendo and Angular Material components. Instead of one project, I made a few different UI components with snippets of functionality. The code for this site can be found at: .</h3>
   </div>
   <mat-divider></mat-divider>
   <div id="login" class="section">
     <div class="left">
       <h2 id="loginsection">Login Page</h2>
       <div class="notes">
-        <p>This is an interative sign in/sign up UI. This is tied to an auth guard to protect certain routes from unauthorized access. For example, attempt to access https://tannersnyder.com/admin without logging in on the UI. Now go to the UI and put in username: Admin, password: Havan@2019! and watch the magic happen.</p>
+        <p>This is an interactive sign in/sign up UI. This is tied to an auth guard to protect certain routes from unauthorized access. For example, attempt to access <span class="link" routerLink="/protectedpage">http://tannersnyder.com/protectedpage</span> without logging in on the UI. Now go to the UI and put in username: 'Admin', password: 'Testing123' and watch the magic happen.</p>
       </div>
       <button kendoButton routerLink="/login" class="secondarybtn">Check it out</button>
     </div>
@@ -48,26 +47,28 @@
   <mat-divider></mat-divider>
   <div id="dashboard" class="section">
     <div class="left">
-      <!-- <img src="../../assets/login.png"> -->
+      <img src="../../assets/dashboard.png">
     </div>
     <div class="right">
       <h2 id="dashboardsection">Simple Dashboard</h2>
       <div class="notes">
-        <p>This is a simple dashboard with dummy data. </p>
+        <p>This is a simple dashboard with dummy data. It doesn't really do anything but, it looks pretty!</p>
       </div>
       <button kendoButton routerLink="/dashboard" class="secondarybtn">Check it out</button>
     </div>
   </div>
 </div>
 <mat-divider></mat-divider>
-<div id="profile" class="section">
+<div id="error" class="section">
   <div class="left">
-    <h2 id="profilesection">Profile Page</h2>
+    <h2 id="errorsection">Error Page</h2>
     <div class="notes">
-      Simple profile page.
+      <p>Simple error handling page that will handle all incorrect URL requests.</p>
     </div>
+    <button kendoButton routerLink="/badurl" class="secondarybtn">Check it out</button>
   </div>
   <div class="right">
-    <!-- img -->
+    <img src="../../assets/error.png">
   </div>
 </div>
+<mat-divider></mat-divider>

@@ -24,10 +24,10 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input kendoTextBox type="email" placeholder="Email" />
-			<input kendoTextBox type="password" placeholder="Password" />
+			<input kendoTextBox type="username" placeholder="Username" [(ngModel)]="username" name="username"/>
+			<input kendoTextBox type="password" placeholder="Password" [(ngModel)]="password" name="password"/>
 			<a href="#">Forgot your password?</a>
-			<button kendoButton class="coloredBtn">Sign In</button>
+			<button kendoButton class="coloredBtn" (click)="checkCreds()">Sign In</button>
 		</form>
 	</div>
 	<div class="overlay-container">

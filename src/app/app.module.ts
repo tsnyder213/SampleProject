@@ -5,9 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { FooterComponent } from './footer/footer.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
+import { ProtectedpageComponent } from './protectedpage/protectedpage.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ResumeComponent } from './resume/resume.component';
+import { ErrorComponent } from './error/error.component';
+
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -19,17 +22,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    FooterComponent,
     DashboardComponent,
+    ProtectedpageComponent,
+    ResumeComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatMenuModule,
     MatDividerModule,
     MatSidenavModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

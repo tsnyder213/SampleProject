@@ -1,0 +1,40 @@
+h3 {
+  margin-top: 20%;
+  font-weight: lighter;
+  width: 100%;
+  text-align: center;
+}
+
+#buttongrp {
+  text-align: center;
+
+  button {
+    background: transparent;
+    color: white;
+    font-size: x-large;
+    font-weight: lighter;
+    padding: 1%;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: #5f2c82;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #49a09d, #5f2c82);
+  	font-size: 12px;
+  	font-weight: bold;
+  	padding: 12px 45px;
+  	letter-spacing: 1px;
+  	text-transform: uppercase;
+  	transition: transform 80ms ease-in;
+    margin: 1em;
+  }
+
+  button:hover {
+    background: white;
+    color: black;
+    border: 1px solid black;
+  }
+}
+
+button:active {
+	transform: scale(0.95);
+}

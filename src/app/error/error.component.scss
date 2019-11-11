@@ -1,0 +1,37 @@
+#errorwrap {
+  width: fit-content;
+  padding: 2em;
+  margin: auto;
+  text-align: center;
+  border: 1 px solid black;
+  border-radius: 20px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  width: 45%;
+  background: white;
+
+  h2, h1 {
+    font-weight: lighter;
+  }
+}
+
+#container {
+	display: flex;
+}
+
+#causes, #suggestions {
+	width: 50%;
+}
+
+ul {
+	text-align: left;
+	line-height: 200%;
+	font-weight: lighter;
+	max-width: 50%;
+}
+
+body {
+  background: #5f2c82;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  padding-top: 5%;
+}

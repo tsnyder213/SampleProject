@@ -121,11 +121,9 @@
 }
 
 #q2 {
-  //color: white;
   text-align: center;
   padding-top: 30vh;
   font-size: -webkit-xxx-large;
-  //text-shadow: 2px 2px black;
   font-family: sans-serif;
 }
 
@@ -198,16 +196,14 @@ p {
 .container {
     margin-top: 10px;
     display: flex;
-    /* margin-top: 50px; */
     height: inherit;
 }
 
 .collapse {
   margin: auto 0;
-    /* float: right; */
-    text-align: right;
-    width: -webkit-fill-available;
-    padding-right: 3%;
+  text-align: right;
+  width: -webkit-fill-available;
+  padding-right: 3%;
 }
 
 mat-card {
@@ -346,10 +342,34 @@ p {
   }
 }
 
+.left {
+
+  img {
+    width: 75%;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
 mat-divider {
   margin: 3em;
 }
 
 button:active {
 	transform: scale(0.95);
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link:focus {
+  outline: none;
+}
+
+#errorsection {
+  border-radius: 74% 26% 50% 50% / 53% 29% 71% 47%;
 }

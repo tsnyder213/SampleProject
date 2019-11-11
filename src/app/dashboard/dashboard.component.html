@@ -1,15 +1,46 @@
 <div id="header">
-<button mat-icon-button routerLink="/"><mat-icon>arrow_back</mat-icon></button><h2>Welcome, Administrator</h2>
+  <div id="headerleft">
+    <button mat-icon-button routerLink="/">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+  <div id="headercenter">
+    <h2>Welcome, Administrator</h2>
+  </div>
+  <div id="headerright">
+    <div id="iconwrap">
+      <mat-icon>account_circle</mat-icon>
+      <mat-icon>settings</mat-icon>
+    </div>
+  </div>
+</div>
+<div id="toolbar">
+  <div id="menubtnwrap">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div id="filterwrap">
+      <input kendoTextBox placeholder="filter"><button mat-icon-button><mat-icon>search</mat-icon></button>
+    </div>
+  </div>
+
 </div>
 <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="side" class="example-sidenav" [fixedInViewport]="true" [fixedTopGap]="0"
-                 [fixedBottomGap]="0">Sidenav
+    <mat-sidenav #sidenav mode="side" class="example-sidenav" opened [fixedInViewport]="true" [fixedTopGap]="60"
+                 [fixedBottomGap]="0">
+              <div class="sidenavitem">
+                <button kendoButton>Home <mat-icon>home</mat-icon></button>
+              </div>
+              <div class="sidenavitem">
+                <button kendoButton>Chat <mat-icon>chat</mat-icon></button>
+              </div>
     </mat-sidenav>
 
-    <mat-sidenav-content [formGroup]="options">
+    <mat-sidenav-content>
       <kendo-grid
         [kendoGridBinding]="gridData"
         [resizable]="true"
+        [sortable]="true"
         style="height: auto">
         <kendo-grid-column-group title="Server Information">
             <kendo-grid-column
@@ -40,6 +71,30 @@
             </kendo-grid-column>
         </kendo-grid-column-group>
       </kendo-grid>
-      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+
+      <div id="chartmessagewrap">
+        <div id="chart">
+          <kendo-chart [categoryAxis]="{ categories: categories }">
+       <kendo-chart-title text="Server Failed Request Rate (%)"></kendo-chart-title>
+       <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
+       <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip>
+       <kendo-chart-series>
+           <kendo-chart-series-item *ngFor="let item of series"
+               type="line" style="smooth" [data]="item.data" [name]="item.name">
+           </kendo-chart-series-item>
+       </kendo-chart-series>
+   </kendo-chart>
+        </div>
+        <div id="messageboard">
+          <h3>Message Board</h3>
+          <mat-divider></mat-divider>
+          <ul>
+            <li *ngFor="let message of messages">
+              <mat-icon>{{message.actiontype}}</mat-icon> - {{message.message}}
+              <mat-divider></mat-divider>
+            </li>
+          </ul>
+        </div>
+    </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
