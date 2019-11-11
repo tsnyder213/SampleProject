@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --ssl true --ssl-cert /Users/Tanners./Desktop/Certs/RatDogSoftware/server.crt --ssl-key /Users/TannerS./Desktop/Certs/RatDogSoftware/server.key",
-    "prod": "node --max_old_space_size=2048 './node_modules/@angular/cli/bin/ng' serve --configuration=production --host tannersnyder.com --port 4201",
+    "prod": "node --max_old_space_size=2048 './node_modules/@angular/cli/bin/ng' serve --configuration=production --host tannersnyder.com --port 4202",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
